@@ -1,65 +1,165 @@
 import Image from "next/image";
+import Link from 'next/link';
+import React from 'react'; // Added React import for standard practice
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+    <main className="pt-20"> {/* Changed root <div> to <main> and added padding for fixed header */}
+      <header className = "fixed top-0 w-full z-10 flex shadow-md bg-white">
+        <nav className="container mx-auto p-4 flex justify-between items-center w-full">
+          <Image 
+            alt = "Logo" width={80} height={80} 
+            src = "/kg.svg" className="mr-8"/>
+          <ul className="flex items-center space-x-6">
+            {/* Using hash links for single-page navigation */}
+            <li><a href="#about-section" className="hover:text-purple-700 transition">About Me</a></li>
+            <li><a href="#portfolio-section" className="hover:text-purple-700 transition">Portfolio</a></li>
+            <li><a href="#resume-section" className="hover:text-purple-700 transition">Resume</a></li>
+            <li><a href="#links-section" className="hover:text-purple-700 transition">Links</a></li>
+          </ul>
+          {/* Button is separate from the ul for easy alignment with justify-between */}
+          <a href="#contact-me-section">
+            <button className="text-purple-700 border-2 border-purple-700 bg-transparent hover:bg-purple-700 hover:text-white transition duration-300 px-5 py-2 rounded">
+              Contact Me
+            </button>
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        </nav>
+      </header>
+
+      {/* Existing Sections (No major changes) */}
+      <section id="about-section" className=" p-8 flex flex-col items-center justify-center space-y-8">
+        {/* ... About Content ... */}
+        <div className="flex flex-col items-center space-y-4 text-center">
+          <Image alt="Portrait of Kemish" src="/Portrait.jpg" 
+            width={150} height={150} className="rounded-full shadow-lg"/>
+            <p className="text-xl text-gray-700">Hey, I'm Kemish</p>
+            <h1 className="text-4xl font-extrabold text-gray-900">Software Developer</h1>
         </div>
-      </main>
-    </div>
+        <div className="flex space-x-4">
+          <Link href="https://github.com/Kemishigp" target="_blank" 
+            className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg flex items-center transition duration-200"aria-label="GitHub Profile"
+            >
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.417 2.865 8.164 6.839 9.5.5.092.682-.217.682-.483 0-.237-.008-.884-.015-1.745-2.787.603-3.37-.99-3.37-2.012-.53-.88-.23-2.115-.823-2.548-1.554-.424-2.822-1.246-2.822-2.802 0-.903.32-1.64.845-2.203.084-.21.366-1.042-.08-2.18.27-.09 1.077.342 1.638.736.51.196 1.05.295 1.603.295.553 0 1.093-.099 1.603-.295.56-.394 1.37-.826 1.638-.736-.445 1.14-.16 1.97-.08 2.18.525.563.845 1.3.845 2.203 0 1.556-1.268 2.378-2.822 2.802-.59.433-.913 1.157-.913 1.85 0 1.344.007 2.428.015 2.753.003.267.18.575.689.482C19.136 20.18 22 16.433 22 12.017 22 6.484 17.523 2 12 2z" clipRule="evenodd" />
+                </svg>
+                GitHub
+            </Link>
+            <Link href="https://www.linkedin.com/in/kemish-gomez/" target="_blank"
+                className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded-lg flex items-center transition duration-200" aria-label="LinkedIn Profile">
+                <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.367-4-3.321-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+            </Link>
+        </div>
+      </section>
+
+      <section id="portfolio-section" className=" p-8 flex flex-col items-center justify-center space-y-8 bg-gray-50">
+        {/* ... Portfolio Content ... */}
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Portfolio</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+          {/* Project Card 1 */}
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+            <Image src="/Project1.jpg" alt="Project 1" width={400} height={200} className="w-full h-48 object-cover"/>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2">Movie WebApp</h3>
+              <p className="text-gray-700">Responsive web application built with React that allows users to quickly search for movies using the TMDB API.</p>
+              <Link href="https://github.com/Kemishigp/Movie-App" target="_blank" className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">View Project →</Link>
+            </div>
+          </div>
+          {/* Project Card 2 */}
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+            <Image src="/project2.jpg" alt="Project 2" width={400} height={200} className="w-full h-48 object-cover"/>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2">Project Title 2</h3>
+              <p className="text-gray-700">Brief description of Project 2.</p>
+              {/* <Link href="[LINK_TO_PROJECT_DEMO]" target="_blank" className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">View Project →</Link> */}
+            </div>
+          </div>
+          {/* Project Card 3 */}
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
+            <Image src="/project3.jpg" alt="Project 3" width={400} height={200} className="w-full h-48 object-cover"/>
+            <div className="p-4">
+              <h3 className="text-xl font-semibold mb-2">Project Title 3</h3>
+              <p className="text-gray-700">Brief description of Project 3.</p>
+              {/* <Link href="[LINK_TO_PROJECT_DEMO]" target="_blank" className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">View Project →</Link> */}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="resume-section" className="p-10 flex flex-col items-center space-y-8">
+        {/* ... Resume Content ... */}
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">My Resume</h2>
+        
+        {/* 1. Download Button */}
+        <Link href="/KEMISH_GOMEZ.pdf" download="Kemish_Gomez_Resume.pdf"
+          className="bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300"
+        >
+          Download PDF Copy
+        </Link>
+        {/* 2. Inline Resume Preview */}
+        <div className="w-full max-w-4xl h-[800px] shadow-2xl border-4 border-gray-300 rounded-lg overflow-hidden">
+          <iframe 
+            src="/resume.pdf#toolbar=0" // Make sure 'resume.pdf' is in your public folder!
+            title="Kemish Gomez Resume Preview"
+            width="100%"
+            height="100%"
+            style={{ border: 'none' }}
+          >
+            Your browser does not support inline PDFs. Please use the download link above.
+          </iframe>
+        </div>
+      </section>
+
+      {/* --- NEW SECTION: Important Links --- */}
+      <section id="links-section" className="p-10 bg-gray-50 flex flex-col items-center space-y-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-6">Important Links</h2>
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 w-full max-w-2xl">
+          {/* Link 1: GitHub */}
+          <Link href="https://github.com/Kemishigp" target="_blank"
+            className="w-full bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl hover:border-purple-500 border-2 border-transparent transition duration-300 flex items-center justify-between"
+          >
+            <span className="text-xl font-semibold">GitHub Repository</span>
+            <span className="text-2xl text-purple-600">→</span>
+          </Link>
+          {/* Link 2: LinkedIn */}
+          <Link href="https://www.linkedin.com/in/kemish-gomez/" target="_blank"
+            className="w-full bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl hover:border-purple-500 border-2 border-transparent transition duration-300 flex items-center justify-between"
+          >
+            <span className="text-xl font-semibold">LinkedIn Profile</span>
+            <span className="text-2xl text-purple-600">→</span>
+          </Link>
+        </div>
+        <p className="text-gray-600 mt-4">Find more of my professional work and coding examples here.</p>
+      </section>
+
+      {/* --- NEW SECTION: Contact Me --- */}
+      <section id="contact-me-section" className="p-10 flex flex-col items-center justify-center space-y-8">
+        <h2 className="text-4xl font-bold text-gray-800">Get in Touch</h2>
+        <p className="text-xl text-gray-600 max-w-lg text-center">
+          I'm currently seeking new opportunities and projects. Feel free to reach out via email or LinkedIn!
+        </p>
+
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
+          {/* Email Button */}
+          <a href="mailto:your.email@example.com">
+            <button className="w-full md:w-auto bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+              Email Me Directly
+            </button>
+          </a>
+          
+          {/* LinkedIn Button (re-use from above) */}
+          <Link href="https://www.linkedin.com/in/kemish-gomez/" target="_blank">
+            <button className="w-full md:w-auto text-purple-700 border-2 border-purple-700 bg-transparent hover:bg-purple-700 hover:text-white transition duration-300 px-6 py-3 rounded-lg font-bold flex items-center justify-center">
+              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zM11 19h-3v-11h3v11zM7.5 5.764c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 13.236h-3v-5.604c0-3.367-4-3.321-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              Connect on LinkedIn
+            </button>
+          </Link>
+        </div>
+      </section>
+
+    </main>
   );
 }
