@@ -1,33 +1,83 @@
+"use client";
+
 import Image from "next/image";
 import Link from 'next/link';
-import React from 'react'; // Added React import for standard practice
+import React, { useState } from "react";
+
 
 export default function Home() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <main className="pt-20"> {/* Changed root <div> to <main> and added padding for fixed header */}
-      <header className = "fixed top-0 w-full z-10 flex shadow-md bg-white">
-        <nav className="container mx-auto p-4 flex justify-between items-center w-full">
-          <Image 
-            alt = "Logo" width={80} height={80} 
-            src = "/kg.svg" className="mr-8"/>
-          <ul className="flex items-center space-x-6">
-            {/* Using hash links for single-page navigation */}
-            <li><a href="#about-section" className="hover:text-purple-700 transition">About Me</a></li>
-            <li><a href="#portfolio-section" className="hover:text-purple-700 transition">Portfolio</a></li>
-            <li><a href="#resume-section" className="hover:text-purple-700 transition">Resume</a></li>
-            <li><a href="#links-section" className="hover:text-purple-700 transition">Links</a></li>
-          </ul>
-          {/* Button is separate from the ul for easy alignment with justify-between */}
+    <main className="pt-20">
+<header className="fixed top-0 w-full z-10 bg-white shadow-md">
+  <nav className="container mx-auto p-4 flex justify-between items-center w-full">
+    {/* --- Logo --- */}
+    <div className="flex items-center space-x-3">
+      <Image alt="Logo" width={60} height={60} src="/kg.svg" />
+    </div>
+
+    {/* --- Hamburger button (visible on mobile) --- */}
+    <button
+      className="md:hidden text-gray-800 hover:text-purple-700 focus:outline-none"
+      onClick={() => setMenuOpen(!menuOpen)}
+    >
+      {/* Simple 3-line hamburger icon */}
+      <svg
+        className="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"
+        />
+      </svg>
+    </button>
+
+    {/* --- Desktop menu --- */}
+    <ul className="hidden md:flex items-center space-x-6">
+      <li><a href="#about-section" className="hover:text-purple-700 transition">About Me</a></li>
+      <li><a href="#portfolio-section" className="hover:text-purple-700 transition">Portfolio</a></li>
+      <li><a href="#resume-section" className="hover:text-purple-700 transition">Resume</a></li>
+    </ul>
+
+    {/* --- Desktop button --- */}
+    <a href="#contact-me-section" className="hidden md:block">
+      <button className="text-purple-700 border-2 border-purple-700 bg-transparent hover:bg-purple-700 hover:text-white transition duration-300 px-5 py-2 rounded">
+        Contact Me
+      </button>
+    </a>
+  </nav>
+
+  {/* --- Mobile menu (toggles on hamburger click) --- */}
+  {menuOpen && (
+    <div className="md:hidden bg-white shadow-lg border-t border-gray-200">
+      <ul className="flex flex-col space-y-4 p-4">
+        <li><a href="#about-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">About Me</a></li>
+        <li><a href="#portfolio-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">Portfolio</a></li>
+        <li><a href="#resume-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">Resume</a></li>
+        <li>
           <a href="#contact-me-section">
-            <button className="text-purple-700 border-2 border-purple-700 bg-transparent hover:bg-purple-700 hover:text-white transition duration-300 px-5 py-2 rounded">
+            <button
+              onClick={() => setMenuOpen(false)}
+              className="w-full text-purple-700 border-2 border-purple-700 bg-transparent hover:bg-purple-700 hover:text-white transition duration-300 px-5 py-2 rounded"
+            >
               Contact Me
             </button>
           </a>
-        </nav>
-      </header>
+        </li>
+      </ul>
+    </div>
+  )}
+</header>
+
 
       {/* Existing Sections (No major changes) */}
-      <section id="about-section" className=" p-8 flex flex-col items-center justify-center space-y-8">
+      <section id="about-section" className="p-20 flex flex-col items-center justify-center space-y-8">
         {/* ... About Content ... */}
         <div className="flex flex-col items-center space-y-4 text-center">
           <Image alt="Portrait of Kemish" src="/Portrait.jpg" 
@@ -52,6 +102,7 @@ export default function Home() {
                 LinkedIn
             </Link>
         </div>
+        <p>Find more of my professional work and coding examples here.</p>
       </section>
 
       <section id="portfolio-section" className=" p-8 flex flex-col items-center justify-center space-y-8 bg-gray-50">
@@ -92,46 +143,28 @@ export default function Home() {
         {/* ... Resume Content ... */}
         <h2 className="text-4xl font-bold text-gray-800 mb-4">My Resume</h2>
         
-        {/* 1. Download Button */}
-        <Link href="/KEMISH_GOMEZ.pdf" download="Kemish_Gomez_Resume.pdf"
-          className="bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300"
-        >
-          Download PDF Copy
-        </Link>
-        {/* 2. Inline Resume Preview */}
-        <div className="w-full max-w-4xl h-[800px] shadow-2xl border-4 border-gray-300 rounded-lg overflow-hidden">
-          <iframe 
-            src="/resume.pdf#toolbar=0" // Make sure 'resume.pdf' is in your public folder!
-            title="Kemish Gomez Resume Preview"
-            width="100%"
-            height="100%"
-            style={{ border: 'none' }}
-          >
-            Your browser does not support inline PDFs. Please use the download link above.
-          </iframe>
-        </div>
-      </section>
+{/* 1. Download Button */}
+<Link
+  href="/KEMISH_GOMEZ.pdf"
+  download="Kemish_Gomez_Resume.pdf"
+  className="bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300"
+>
+  Download PDF Copy
+</Link>
 
-      {/* --- NEW SECTION: Important Links --- */}
-      <section id="links-section" className="p-10 bg-gray-50 flex flex-col items-center space-y-8">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Important Links</h2>
-        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 w-full max-w-2xl">
-          {/* Link 1: GitHub */}
-          <Link href="https://github.com/Kemishigp" target="_blank"
-            className="w-full bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl hover:border-purple-500 border-2 border-transparent transition duration-300 flex items-center justify-between"
-          >
-            <span className="text-xl font-semibold">GitHub Repository</span>
-            <span className="text-2xl text-purple-600">→</span>
-          </Link>
-          {/* Link 2: LinkedIn */}
-          <Link href="https://www.linkedin.com/in/kemish-gomez/" target="_blank"
-            className="w-full bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl hover:border-purple-500 border-2 border-transparent transition duration-300 flex items-center justify-between"
-          >
-            <span className="text-xl font-semibold">LinkedIn Profile</span>
-            <span className="text-2xl text-purple-600">→</span>
-          </Link>
-        </div>
-        <p className="text-gray-600 mt-4">Find more of my professional work and coding examples here.</p>
+{/* 2. Inline Resume Preview */}
+<div className="w-full max-w-4xl h-[800px] shadow-2xl border-4 border-gray-300 rounded-lg overflow-hidden">
+  <iframe
+    src="/KEMISH_GOMEZ.pdf#toolbar=0"
+    title="Kemish Gomez Resume Preview"
+    width="100%"
+    height="100%"
+    style={{ border: 'none' }}
+  >
+    Your browser does not support inline PDFs. Please use the download link above.
+  </iframe>
+</div>
+
       </section>
 
       {/* --- NEW SECTION: Contact Me --- */}
