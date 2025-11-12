@@ -83,7 +83,7 @@ export default function Home() {
           <Image alt="Portrait of Kemish" src="/Portrait.jpg" 
             width={150} height={150} className="rounded-full shadow-lg"/>
             <p className="text-xl text-gray-700">Hey, I'm Kemish</p>
-            <h1 className="text-4xl font-extrabold text-gray-900">Software Developer</h1>
+            <h1 className="text-4xl font-extrabold text-gray-900">Full Stack Developer</h1>
         </div>
         <div className="flex space-x-4">
           <Link href="https://github.com/Kemishigp" target="_blank" 
