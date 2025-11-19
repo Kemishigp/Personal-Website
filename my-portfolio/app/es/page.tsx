@@ -8,28 +8,6 @@ import React, { useState } from "react";
 export default function Home() {
   const [lang, setLang] = useState("en");
 
-const t = {
-  en: {
-    about: "About Me",
-    portfolio: "Portfolio",
-    resume: "Resume",
-    contact: "Contact Me",
-    greeting: "Hey, I'm Kemish",
-    title: "Full Stack Developer",
-    subtitle: "Find more of my professional work and coding examples here.",
-    getInTouch: "Get in Touch",
-  },
-  es: {
-    about: "Sobre Mí",
-    portfolio: "Portafolio",
-    resume: "Currículum",
-    contact: "Contáctame",
-    greeting: "Hola, soy Kemish",
-    title: "Desarrollador Full Stack",
-    subtitle: "Encuentra más de mi trabajo profesional y ejemplos de código aquí.",
-    getInTouch: "Ponte en contacto",
-  }
-};
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -43,8 +21,8 @@ const t = {
     </div> */}
     
 
-  <Link href="/es">
-  <button className="text-gray-800 border px-3 py-1 rounded hover:bg-gray-200 transition">🇲🇽 Español</button>
+  <Link href="/">
+  <button className="text-gray-800 border px-3 py-1 rounded hover:bg-gray-200 transition">🇺🇸 English</button>
 </Link>
 
 
@@ -72,15 +50,15 @@ const t = {
     {/* --- Desktop menu --- */}
     <ul className="hidden md:flex items-center space-x-6">
       
-      <li><a href="#about-section" className="hover:text-purple-700 transition">About Me</a></li>
-      <li><a href="#portfolio-section" className="hover:text-purple-700 transition">Portfolio</a></li>
-      <li><a href="#resume-section" className="hover:text-purple-700 transition">Resume</a></li>
+      <li><a href="#about-section" className="hover:text-purple-700 transition">Sobre Mí</a></li>
+      <li><a href="#portfolio-section" className="hover:text-purple-700 transition">Portafolio</a></li>
+      <li><a href="#resume-section" className="hover:text-purple-700 transition">Mi Currículum</a></li>
     </ul>
 
     {/* --- Desktop button --- */}
     <a href="#contact-me-section" className="hidden md:block">
       <button className="text-purple-700 border-2 border-purple-700 bg-transparent hover:bg-purple-700 hover:text-white transition duration-300 px-5 py-2 rounded">
-        Contact Me
+        Contáctame
       </button>
     </a>
   </nav>
@@ -89,16 +67,16 @@ const t = {
   {menuOpen && (
     <div className="md:hidden bg-white shadow-lg border-t border-gray-200">
       <ul className="flex flex-col space-y-4 p-4">
-        <li><a href="#about-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">About Me</a></li>
-        <li><a href="#portfolio-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">Portfolio</a></li>
-        <li><a href="#resume-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">Resume</a></li>
+        <li><a href="#about-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">Sobre Mí</a></li>
+        <li><a href="#portfolio-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">Portfalio</a></li>
+        <li><a href="#resume-section" onClick={() => setMenuOpen(false)} className="hover:text-purple-700 transition">Mi Currículum</a></li>
         <li>
           <a href="#contact-me-section">
             <button
               onClick={() => setMenuOpen(false)}
               className="w-full text-purple-700 border-2 border-purple-700 bg-transparent hover:bg-purple-700 hover:text-white transition duration-300 px-5 py-2 rounded"
             >
-              Contact Me
+              Contáctame
             </button>
           </a>
         </li>
@@ -114,8 +92,8 @@ const t = {
         <div className="flex flex-col items-center space-y-4 text-center">
           <Image alt="Portrait of Kemish" src="/Portrait.jpg" 
             width={150} height={150} className="rounded-full shadow-lg"/>
-            <p className="text-xl text-gray-700">Hey, I'm Kemish</p>
-            <h1 className="text-4xl font-extrabold text-gray-900">Full Stack Developer</h1>
+            <p className="text-xl text-gray-700">Hola, soy Kemish</p>
+            <h1 className="text-4xl font-extrabold text-gray-900">Desarrollador Full Stack</h1>
         </div>
         <div className="flex space-x-4">
           <Link href="https://github.com/Kemishigp" target="_blank" 
@@ -134,26 +112,27 @@ const t = {
                 LinkedIn
             </Link>
         </div>
-        <p>Find more of my professional work and coding examples here.</p>
+        <p>Encuentra más de mi trabajo profesional y ejemplos de código aquí.</p>
       </section>
 
       <section id="portfolio-section" className=" p-8 flex flex-col items-center justify-center space-y-8 bg-gray-50">
         {/* ... Portfolio Content ... */}
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Portfolio</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8">Portfalio</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
           {/* Project Card 1 */}
           <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
             <Image src="/Project1.jpg" alt="Project 1" width={400} height={200} className="w-full h-48 object-cover"/>
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">Movie WebApp</h3>
-              <p className="text-gray-700">Responsive web application built with React that allows users to quickly search for movies using the TMDB API.</p>
-              <div className="flex justify-between space-y-3 mt-4">
+<p className="text-gray-700">
+  Aplicación web responsiva construida con React que permite a los usuarios buscar películas rápidamente usando la API de TMDB.
+</p>              <div className="flex justify-between space-y-3 mt-4">
 
               <Link href="https://moviebrwsrapp.netlify.app/" target="_blank" 
-              className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">View Project→</Link>
+              className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">Visitar Proyecto→</Link>
               
               <Link href="https://github.com/Kemishigp/Movie-App" target="_blank" 
-              className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">Source Code →</Link>
+              className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">Código Fuente→</Link>
             </div>
             </div>
           </div>
@@ -180,7 +159,7 @@ const t = {
 
       <section id="resume-section" className="p-10 flex flex-col items-center space-y-8">
         {/* ... Resume Content ... */}
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">My Resume</h2>
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">Mi Currículum</h2>
         
 {/* 1. Download Button */}
 <Link
@@ -188,19 +167,19 @@ const t = {
   download="Kemish_Gomez_Resume.pdf"
   className="bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition duration-300"
 >
-  Download PDF Copy
+  Descarga una copia PDF
 </Link>
 
 {/* 2. Inline Resume Preview */}
 <div className="w-full max-w-4xl h-[800px] shadow-2xl border-4 border-gray-300 rounded-lg overflow-hidden">
   <iframe
-    src="/KEMISH_GOMEZ.pdf#toolbar=0"
+    src="/Kemish Gómez CV copy.pdf#toolbar=0"
     title="Kemish Gomez Resume Preview"
     width="100%"
     height="100%"
     style={{ border: 'none' }}
   >
-    Your browser does not support inline PDFs. Please use the download link above.
+Tu navegador no soporta PDFs incrustados. Por favor usa el enlace de descarga de arriba.    Your browser does not support inline PDFs. Please use the download link above.
   </iframe>
 </div>
 
@@ -208,17 +187,16 @@ const t = {
 
       {/* --- NEW SECTION: Contact Me --- */}
       <section id="contact-me-section" className="p-10 flex flex-col items-center justify-center space-y-8">
-        <h2 className="text-4xl font-bold text-gray-800">Get in Touch</h2>
+        <h2 className="text-4xl font-bold text-gray-800">Ponte en Contacto</h2>
         <p className="text-xl text-gray-600 max-w-lg text-center">
-          I'm currently seeking new opportunities and projects. Feel free to reach out via email or LinkedIn!
-        </p>
+Actualmente estoy buscando nuevas oportunidades y proyectos. ¡No dudes en contactarme por correo electrónico o LinkedIn!        </p>
 
         <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
           {/* Email Button */}
           <a href="mailto:your.email@example.com">
             <button className="w-full md:w-auto bg-purple-700 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-              Email Me Directly
+              Escríbeme por correo
             </button>
           </a>
           
@@ -226,7 +204,7 @@ const t = {
           <Link href="https://www.linkedin.com/in/kemish-gomez/" target="_blank">
             <button className="w-full md:w-auto text-purple-700 border-2 border-purple-700 bg-transparent hover:bg-purple-700 hover:text-white transition duration-300 px-6 py-3 rounded-lg font-bold flex items-center justify-center">
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zM11 19h-3v-11h3v11zM7.5 5.764c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 13.236h-3v-5.604c0-3.367-4-3.321-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              Connect on LinkedIn
+              Conéctate en LinkedIn
             </button>
           </Link>
         </div>
