@@ -115,7 +115,14 @@ export default function Home() {
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">Movie WebApp</h3>
               <p className="text-gray-700">Responsive web application built with React that allows users to quickly search for movies using the TMDB API.</p>
-              <Link href="https://github.com/Kemishigp/Movie-App" target="_blank" className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">View Project →</Link>
+              <div className="flex justify-between space-y-3 mt-4">
+
+              <Link href="https://moviebrwsrapp.netlify.app/" target="_blank" 
+              className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">View Project→</Link>
+              
+              <Link href="https://github.com/Kemishigp/Movie-App" target="_blank" 
+              className="mt-4 inline-block text-purple-600 hover:text-purple-800 font-medium">Source Code →</Link>
+            </div>
             </div>
           </div>
           {/* Project Card 2 */}
