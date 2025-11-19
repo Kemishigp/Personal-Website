@@ -112,7 +112,7 @@ export default function Home() {
                 LinkedIn
             </Link>
         </div>
-        <p>Encuentra más de mi trabajo profesional y ejemplos de código aquí.</p>
+        <p>Encuentra más de mi trabajo profesional y proyectos personales aquí.</p>
       </section>
 
       <section id="portfolio-section" className=" p-8 flex flex-col items-center justify-center space-y-8 bg-gray-50">
