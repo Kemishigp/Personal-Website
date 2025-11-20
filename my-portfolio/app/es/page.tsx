@@ -173,7 +173,7 @@ export default function Home() {
 {/* 2. Inline Resume Preview */}
 <div className="w-full max-w-4xl h-[800px] shadow-2xl border-4 border-gray-300 rounded-lg overflow-hidden">
   <iframe
-    src="/Kemish Gómez CV copy.pdf#toolbar=0"
+    src="/Kemish Gómez CV.pdf#toolbar=0"
     title="Kemish Gomez Resume Preview"
     width="100%"
     height="100%"
