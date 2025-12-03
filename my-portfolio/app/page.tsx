@@ -6,41 +6,13 @@ import React, { useState } from "react";
 
 
 export default function Home() {
-  const [lang, setLang] = useState("en");
-
-const t = {
-  en: {
-    about: "About Me",
-    portfolio: "Portfolio",
-    resume: "Resume",
-    contact: "Contact Me",
-    greeting: "Hey, I'm Kemish",
-    title: "Full Stack Developer",
-    subtitle: "Find more of my professional work and coding examples here.",
-    getInTouch: "Get in Touch",
-  },
-  es: {
-    about: "Sobre Mí",
-    portfolio: "Portafolio",
-    resume: "Currículum",
-    contact: "Contáctame",
-    greeting: "Hola, soy Kemish",
-    title: "Desarrollador Full Stack",
-    subtitle: "Encuentra más de mi trabajo profesional y ejemplos de código aquí.",
-    getInTouch: "Ponte en contacto",
-  }
-};
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main className="pt-20">
+    <main className="pt-20 ">
 <header className="fixed top-0 w-full z-10 bg-white shadow-md">
   <nav className="container mx-auto p-4 flex justify-between items-center w-full">
     {/* --- Logo --- */}
-    {/* <div className="flex items-center space-x-3">
-      <Image alt="Logo" width={60} height={60} src="/kg.svg" />
-    </div> */}
     
 
   <Link href="/es">
