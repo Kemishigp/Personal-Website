@@ -78,6 +78,8 @@ export default function Home() {
     </div>
   )}
 </header>
+{/* React */}
+
 
 
       {/* Existing Sections (No major changes) */}
