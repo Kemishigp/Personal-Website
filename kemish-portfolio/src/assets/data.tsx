@@ -85,6 +85,7 @@ export const myInfo = {
     linkedin: "https://www.linkedin.com/in/kemish-gomez/",
     github: "https://www.github.com/kemishigp",
     location: "Toluca, México",
+    whatsapp: "https://wa.me/13853132568"
   },
   experience: {
     work: [
