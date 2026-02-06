@@ -1,0 +1,51 @@
+{
+  "name": "kemish-gomez-portfolio",
+  "private": true,
+  "version": "2.1.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.12",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.515.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nodejs": "^5.14.5",
+    "@eslint/js": "^9.34.0",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.34.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.3.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.41.0",
+    "vite": "^6.3.5"
+  },
+  "description": "My personal [software engineer portfolio🔗](www.kemishgomez.dev)   Written with **React**, **Typescript**, and **Framer Motion**.   It is made in English only for now.   Responsive!   It contains these sections:",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeINN95612/kemish-gomez-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeINN95612/kemish-gomez-portfolio/issues"
+  },
+  "homepage": "https://github.com/CodeINN95612/kemish-gomez-portfolio#readme"
+}

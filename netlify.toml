@@ -1,13 +1,13 @@
 [build]
-  base = "my-portfolio"
+  base = "kemish-portfolio"
   command = "npm run build"
-  publish = ".next"
+  publish = ".node"
 
 [functions]
   node_bundler = "esbuild"
 
 [[plugins]]
-package = "@netlify/plugin-nextjs"
+package = "@netlify/plugin-nodejs"
 
 
 [[redirects]]
