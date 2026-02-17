@@ -1,8 +1,9 @@
-import { Book, Dumbbell, Gamepad2 } from "lucide-react";
-import { AiOutlineDotNet } from "react-icons/ai";
+import { Book, Dumbbell, Guitar } from "lucide-react";
+
+import { RiNextjsFill } from "react-icons/ri";
+import { SiSpringboot,SiSpring } from "react-icons/si";
 import { FaDocker, FaNodeJs, FaReact } from "react-icons/fa";
 import { TbSql } from "react-icons/tb";
-import { VscAzure } from "react-icons/vsc";
 import type { Experience } from "../lib/types";
 
 export const myInfo = {
@@ -12,9 +13,9 @@ export const myInfo = {
   image: "/Portrait.jpg",
   skills: [
     {
-      name: ".Net",
-      children: <AiOutlineDotNet className="size-10" />,
-      className: "bg-violet-500",
+      name: "NextJS",
+      children: <RiNextjsFill className="size-10" />,
+      className: "bg-zinc-500",
     },
     {
       name: "React",
@@ -22,19 +23,19 @@ export const myInfo = {
       className: "bg-sky-500",
     },
     {
-      name: "Docker",
-      children: <FaDocker className="size-10" />,
-      className: "bg-blue-700",
-    },
-    {
       name: "NodeJS",
       children: <FaNodeJs className="size-10" />,
       className: "bg-green-500",
     },
     {
-      name: "Azure",
-      children: <VscAzure className="size-10" />,
-      className: "bg-blue-500",
+      name: "Docker",
+      children: <FaDocker className="size-10" />,
+      className: "bg-blue-700",
+    },
+    {
+      name: "Spring Boot",
+      children: <SiSpring className="size-10" />,
+      className: "bg-green-500",
     },
     {
       name: "Sql",
@@ -50,22 +51,22 @@ export const myInfo = {
         value: "Lines of code written",
       },
       {
-        label: "6",
+        label: "1",
         value: "Years of experience",
       },
       {
-        label: "2.5",
+        label: "2",
         value: "Spoken languages",
       },
       {
-        label: "2",
+        label: "3",
         value: "Countries lived in",
       },
     ],
     hobbies: [
       {
-        name: "Gaming",
-        icon: <Gamepad2 className="size-6 text-zinc-400" />,
+        name: "Guitar",
+        icon: <Guitar className="size-6 text-zinc-400" />,
       },
       {
         name: "Reading",
@@ -85,7 +86,6 @@ export const myInfo = {
     linkedin: "https://www.linkedin.com/in/kemish-gomez/",
     github: "https://www.github.com/kemishigp",
     location: "Toluca, México",
-    whatsapp: "https://wa.me/13853132568"
   },
   experience: {
     work: [
@@ -150,8 +150,8 @@ export const myInfo = {
       title: "Developer Portfolio",
       description: "My personal developer portfolio",
       technologies: ["React", "Tailwind CSS", "Typescript", "Framer Motion"],
-      liveLink: "https://www.kemishgomez.dev",
-      githubLink: "https://github.com/kemishigp/kemish-gomez-portfolio",
+      liveLink: "https://kemishgomez.netlify.app/",
+      githubLink: "https://github.com/Kemishigp/Personal-Website",
       image: "/projects/portfolio.jpg",
     },
     {
@@ -163,28 +163,26 @@ export const myInfo = {
       image: "/projects/we-like-sushi.jpg",
     },
     {
-      title: "Oxify Mod",
-      description: "Minecraft mod that adds oxifier item to the game.",
-      technologies: ["Java", "Fabric"],
-      liveLink: "https://modrinth.com/mod/oxify",
-      githubLink: "https://github.com/kemishigp/OxifyMod",
-      image: "/projects/oxify.jpg",
+      title: "Salon & Co.",
+      description: "Full-stack appointment scheduling application designed to automate salon operations. The system features real-time synchronization between a local PostgreSQL database and a third-party scheduling API",
+      technologies: ["NextJs", "BetterAuth", "Prisma", "PostgreSQL", "Neon", "Rest API"],
+      liveLink: "https://salonco.netlify.app/",
+      githubLink: "https://github.com/Kemishigp/salon-website",
+      image: "/projects/salonco.jpg",
     },
     {
-      title: "Auth Enterprise",
+      title: "Movie Browser App",
       description:
-        "Authentication demo for youtube series about .NET auth. Manages JWT, Users, Roles, and Permissions.",
+        "A movie discovery website that allows users to browse, search, and explore detailed information about films, including ratings, summaries, and release date.",
       technologies: [
-        ".NET",
-        "C#",
-        "Entity Framework",
-        "PostgreSQL",
-        "Docker",
-        "Vertical Slice Architecture",
+        "Next.js",
+        "React",
+        "Rest API",
+        "Vercel",
       ],
-      liveLink: "https://www.youtube.com/watch?v=rcRMXLr4f60",
-      githubLink: "https://github.com/kemishigp/AuthEnterprise",
-      image: "/projects/auth-enterprise.jpg",
+      liveLink: "https://moviebrwsrapp.netlify.app/",
+      githubLink: "https://github.com/Kemishigp/Movie-App",
+      image: "/projects/Project1.jpg",
     },
   ],
   certifications: [
