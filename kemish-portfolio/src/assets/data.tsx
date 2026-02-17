@@ -1,7 +1,7 @@
 import { Book, Dumbbell, Guitar } from "lucide-react";
 
 import { RiNextjsFill } from "react-icons/ri";
-import { SiSpringboot,SiSpring } from "react-icons/si";
+import { SiSpring } from "react-icons/si";
 import { FaDocker, FaNodeJs, FaReact } from "react-icons/fa";
 import { TbSql } from "react-icons/tb";
 import type { Experience } from "../lib/types";
