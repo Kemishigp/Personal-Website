@@ -86,7 +86,7 @@
 //       <section id="about-section" className="p-20 flex flex-col items-center justify-center space-y-8">
 //         {/* ... About Content ... */}
 //         <div className="flex flex-col items-center space-y-4 text-center">
-//           <Image alt="Portrait of Kemish" src="/Portrait.jpg" 
+//           <Image alt="Portrait of Kemish" src="/Portrait.webp" 
 //             width={150} height={150} className="rounded-full shadow-lg"/>
 //             <p className="text-xl text-gray-700">Hey, I'm Kemish</p>
 //             <h1 className="text-4xl font-extrabold text-gray-900">Full Stack Developer</h1>
@@ -117,7 +117,7 @@
 //         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
 //           {/* Project Card 1 */}
 //           <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
-//             <Image src="/Project1.jpg" alt="Project 1" width={400} height={200} className="w-full h-48 object-cover"/>
+//             <Image src="/Project1.webp" alt="Project 1" width={400} height={200} className="w-full h-48 object-cover"/>
 //             <div className="p-4">
 //               <h3 className="text-xl font-semibold mb-2">Movie WebApp</h3>
 //               <p className="text-gray-700">Responsive web application built with React that allows users to quickly search for movies using the TMDB API.</p>
@@ -133,7 +133,7 @@
 //           </div>
 //           {/* Project Card 2 */}
 //           <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
-//             <Image src="/project2.jpg" alt="Project 2" width={400} height={200} className="w-full h-48 object-cover"/>
+//             <Image src="/project2.webp" alt="Project 2" width={400} height={200} className="w-full h-48 object-cover"/>
 //             <div className="p-4">
 //               <h3 className="text-xl font-semibold mb-2">Project Title 2</h3>
 //               <p className="text-gray-700">Brief description of Project 2.</p>
@@ -142,7 +142,7 @@
 //           </div>
 //           {/* Project Card 3 */}
 //           <div className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition duration-300">
-//             <Image src="/project3.jpg" alt="Project 3" width={400} height={200} className="w-full h-48 object-cover"/>
+//             <Image src="/project3.webp" alt="Project 3" width={400} height={200} className="w-full h-48 object-cover"/>
 //             <div className="p-4">
 //               <h3 className="text-xl font-semibold mb-2">Project Title 3</h3>
 //               <p className="text-gray-700">Brief description of Project 3.</p>

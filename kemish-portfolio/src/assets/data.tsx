@@ -10,7 +10,7 @@ export const myInfo = {
   name: "Kemish Gomez",
   alias: "Kemish",
   title: "Full Stack Developer",
-  image: "/Portrait.jpg",
+  image: "/Portrait.webp",
   skills: [
     {
       name: "NextJS",
@@ -153,7 +153,7 @@ export const myInfo = {
       technologies: ["React", "Tailwind CSS", "Typescript", "Framer Motion"],
       liveLink: "https://kemishgomez.netlify.app/",
       githubLink: "https://github.com/Kemishigp/Personal-Website",
-      image: "/projects/portfolio.jpg",
+      image: "/projects/portfolio.webp",
     },
     {
       title: "We Like Sushi",
@@ -161,7 +161,7 @@ export const myInfo = {
         "Blog / CMS to rate sushi restaurants with my girlfriend with Authentication. Currently in development.",
       technologies: ["Sveltekit", "Tailwind CSS", "ShadCN", "Supabase"],
       githubLink: "https://github.com/kemishigp/WeLikeSushi",
-      image: "/projects/we-like-sushi.jpg",
+      image: "/projects/we-like-sushi.webp",
     },
     {
       title: "Salon & Co.",
@@ -169,7 +169,7 @@ export const myInfo = {
       technologies: ["NextJs", "BetterAuth", "Prisma", "PostgreSQL", "Neon", "Rest API"],
       liveLink: "https://salonco.netlify.app/",
       githubLink: "https://github.com/Kemishigp/salon-website",
-      image: "/projects/salonco.jpg",
+      image: "/projects/salonco.webp",
     },
     {
       title: "Movie Browser App",
@@ -183,7 +183,7 @@ export const myInfo = {
       ],
       liveLink: "https://moviebrwsrapp.netlify.app/",
       githubLink: "https://github.com/Kemishigp/Movie-App",
-      image: "/projects/Project1.jpg",
+      image: "/projects/Project1.webp",
     },
   ],
   certifications: [
