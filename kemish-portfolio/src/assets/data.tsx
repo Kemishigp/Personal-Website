@@ -83,7 +83,7 @@ export const myInfo = {
   contact: {
     email: "kemish.igp@gmail.com",
     phone: "+52 722 557 1720",
-    linkedin: "https://www.linkedin.com/in/kemish-gomez/",
+    linkedin: "https://www.linkedin.com/in/isai-gomez-bab585285/",
     github: "https://www.github.com/kemishigp",
     location: "Toluca, México",
     whatsapp: ""
