@@ -11,6 +11,7 @@ export const myInfo = {
   alias: "Isai",
   title: "Full Stack Developer",
   image: "/Portrait.webp",
+  image2: "/BYUI.webp",
   skills: [
     {
       name: "NextJS",
