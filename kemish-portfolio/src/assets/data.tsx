@@ -94,10 +94,10 @@ export const myInfo = {
         title: "Junior Fullstack Developer",
         company: "Altamira",
         location: "Metepec, Mexico",
-        dateRange: "2026 - Present",
+        dateRange: "Apr 2026 - Present",
         description:
-          "Developed and maintained a financial system used by banks nationwide. Refactored legacy code, provided customer support, and trained new developers.",
-        skills: ["Javascript", "Docker", "Typescript", "Vue.js"],
+          "Building and maintaining real-time features and REST APIs for a Vue.js security analytics platform used by banks, including WebSocket-based event deduplication that eliminated duplicate and lost events without page reloads, ingestion endpoints that transform and route external data, and standardized REST endpoints for authentication, session management, and pagination.",
+        skills: ["Javascript", "Docker", "Typescript", "Vue.js", "Node.js"],
         current: true,
       },
       {
@@ -106,26 +106,18 @@ export const myInfo = {
         location: "Remote",
         dateRange: "Mar 2025 - Jul 2025",
         description:
-          "Develop and maintain the company’s logistics system, refactor legacy code, and build new features and microservices. Lead the team as a Scrum master.",
-        skills: ["Java", "Spring Boot", "SQL", "RESTful APIs"],
+          "Developed RESTful APIs in React connected to PostgreSQL for internal business-critical applications, implemented JWT-based authentication and session management, cut average API response times by 15% through SQL query optimization, and containerized core services with Docker to maintain parity across dev, staging, and production.",
+        skills: ["Javascript", "React", "PostgreSQL", "JWT", "Docker", "RESTful APIs"],
       },
     ] satisfies Experience[],
-    freelance: [
+    Volunteer: [
       {
-        project: "Cyan-Bot",
-        client: "Independent",
+        project: "University Tour Booking Platform",
+        client: "Brigham Young University - Idaho",
         description:
-          "Discord bot for that managing payments and roles in a translation community",
-        duration: "3 months",
-        skills: ["Python", "MongoDB"],
-      },
-      {
-        project: "ULI",
-        client: "Universidad de las Américas",
-        description:
-          "AI chatbot for customer service customized with information about the institution",
-        duration: "1 year",
-        skills: ["Python", "React", "C#", "SignalR", "Azure"],
+          "Co-developed a university tour booking SaaS platform end-to-end (Next.js, Node.js, PostgreSQL) — booking, staff management, analytics dashboards, and inventory modules, with real-time slot availability via Socket.IO.",
+        duration: "4 months",
+        skills: ["Next.js", "Node.js", "PostgreSQL", "Socket.IO"],
       },
     ],
   },
