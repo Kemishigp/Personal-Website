@@ -15,7 +15,7 @@ import { AnimatedSnapshotBox } from "./animated-ui/AnimatedSnapshotBox";
 import { AnimatedHobbiesBox } from "./animated-ui/AnimatedHobbiesBox";
 import { AnimatedExperienceBox } from "./animated-ui/AnimatedExperienceBox";
 import { myInfo } from "../assets/data";
-import { AnimatedFreelanceBox } from "./animated-ui/AnimatedFreelanceBox";
+import { AnimatedvolunteerBox } from "./animated-ui/AnimatedvolunteerBox";
 import { AnimatedEducationBox } from "./animated-ui/AnimatedEducationBox";
 import { AnimatedProjectsBox } from "./animated-ui/AnimatedProjectsBox";
 import { AnimatedRightLeftBox } from "./animated-ui/AnimatedRightLeftBox";
@@ -88,7 +88,7 @@ const ContentBox = () => {
         <AnimatedHeaderBox />
         <AnimatedExperienceBox experience={myInfo.experience.work[0]} />
         <AnimatedExperienceBox experience={myInfo.experience.work[1]} />
-        <AnimatedFreelanceBox freelanceJobs={myInfo.experience.freelance} />
+        <AnimatedvolunteerBox volunteerJobs={myInfo.experience.volunteer} />
         <div className="flex w-full gap-4">
           <AnimatedSocialsBox />
         </div>
