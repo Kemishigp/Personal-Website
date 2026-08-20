@@ -5,7 +5,7 @@ import { AnimatedMenuBox } from "./animated-ui/AnimatedMenuBox";
 import { AnimatedHeaderBox } from "./animated-ui/AnimatedHeaderBox";
 import { AnimatedSkillsHobbiesBox } from "./animated-ui/AnimatedSkillsHobbiesBox";
 import { AnimatedExperienceBox } from "./animated-ui/AnimatedExperienceBox";
-import { AnimatedvolunteerBox } from "./animated-ui/AnimatedvolunteerBox";
+import { AnimatedVolunteerBox } from "./animated-ui/AnimatedVolunteerBox";
 import { AnimatedSnapshotBox } from "./animated-ui/AnimatedSnapshotBox";
 import { AnimatedImageBox } from "./animated-ui/AnimatedImageBox";
 import { AnimatedHobbiesBox } from "./animated-ui/AnimatedHobbiesBox";
@@ -52,7 +52,7 @@ const NormalOrProjectsBox = () => {
       <AnimatedMenuBox />
       {activeSection !== "projects" ? <SecondaryInformationBox /> : null}
       {activeSection !== "projects" ? <AnimatedLanguagesBox /> : null}
-      {activeSection !== "projects" ? <volunteerOrSocialsBox /> : null}
+      {activeSection !== "projects" ? <VolunteerOrSocialsBox /> : null}
       {activeSection !== "projects" ? <AnimatedEmailBox /> : null}
       {activeSection !== "projects" ? <AnimatedLocationBox /> : null}
       {activeSection !== "projects" ? <EmptyBox /> : null}
@@ -107,11 +107,11 @@ const ExperienceOrAboutOrImageBox = () => {
   return <AnimatedImageBox />;
 };
 
-const volunteerOrSocialsBox = () => {
+const VolunteerOrSocialsBox = () => {
   const { activeSection } = useSectionContext();
 
   if (activeSection === "experience") {
-    return <AnimatedvolunteerBox volunteerJobs={myInfo.experience.volunteer} />;
+    return <AnimatedVolunteerBox VolunteerJobs={myInfo.experience.Volunteer} />;
   }
 
   return <AnimatedSocialsBox />;
