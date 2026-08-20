@@ -91,23 +91,23 @@ export const myInfo = {
   experience: {
     work: [
       {
-        title: "Software Developer Intern",
-        company: "Vorp",
-        location: "Rexburg, Idaho",
-        dateRange: "2025",
+        title: "Junior Fullstack Developer",
+        company: "Altamira",
+        location: "Metepec, Mexico",
+        dateRange: "2026 - Present",
         description:
-          "Develop and maintain the company’s logistics system, refactor legacy code, and build new features and microservices. Lead the team as a Scrum master.",
-        skills: ["C#", ".NET", "SQL", "Docker", "Azure Devops", "Scrum"],
+          "Developed and maintained a financial system used by banks nationwide. Refactored legacy code, provided customer support, and trained new developers.",
+        skills: ["Javascript", "Docker", "Typescript", "Vue.js"],
         current: true,
       },
       {
-        title: "Junior Software Engineer",
-        company: "CloudStudio",
-        location: "Rexburg, Idaho",
-        dateRange: "2019 - 2023",
+        title: "Intern",
+        company: "HeartCentrix Solutions",
+        location: "Remote",
+        dateRange: "Mar 2025 - Jul 2025",
         description:
-          "Developed and maintained a financial system used by banks nationwide. Refactored legacy code, provided customer support, and trained new developers.",
-        skills: ["C#", ".NET", "SQL", "Silverlight"],
+          "Develop and maintain the company’s logistics system, refactor legacy code, and build new features and microservices. Lead the team as a Scrum master.",
+        skills: ["Java", "Spring Boot", "SQL", "RESTful APIs"],
       },
     ] satisfies Experience[],
     freelance: [
