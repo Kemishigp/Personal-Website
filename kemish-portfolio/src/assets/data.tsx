@@ -96,7 +96,7 @@ export const myInfo = {
         location: "Metepec, Mexico",
         dateRange: "Apr 2026 - Present",
         description:
-          "Building and maintaining real-time features and REST APIs for a Vue.js security analytics platform used by banks, including WebSocket-based event deduplication that eliminated duplicate and lost events without page reloads, ingestion endpoints that transform and route external data, and standardized REST endpoints for authentication, session management, and pagination.",
+          "Building and maintaining real-time features and REST APIs for a Vue.js security analytics platform, including WebSocket-based event deduplication, ingestion endpoints that transform and route external data.",
         skills: ["Javascript", "Docker", "Typescript", "Vue.js", "Node.js"],
         current: true,
       },
@@ -106,8 +106,8 @@ export const myInfo = {
         location: "Remote",
         dateRange: "Mar 2025 - Jul 2025",
         description:
-          "Developed RESTful APIs in React connected to PostgreSQL for internal business-critical applications, implemented JWT-based authentication and session management, cut average API response times by 15% through SQL query optimization, and containerized core services with Docker to maintain parity across dev, staging, and production.",
-        skills: ["Javascript", "React", "PostgreSQL", "JWT", "Docker", "RESTful APIs"],
+          "Developed RESTful APIs in Spring Boot connected to PostgreSQL for internal business applications, implemented JWT-based authentication, query optimization, and containerized core services with Docker.",
+        skills: ["Java", "Spring Boot", "PostgreSQL", "JWT", "Docker", "RESTful APIs"],
       },
     ] satisfies Experience[],
     Volunteer: [
@@ -131,7 +131,6 @@ export const myInfo = {
         "Advanced programming",
         "Advanced software engineering principles",
         "Web, mobile, and desktop development",
-        "Game development",
         "Software design",
         "Networks and Operative Systems",
       ],
