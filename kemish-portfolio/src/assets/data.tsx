@@ -7,8 +7,8 @@ import { TbSql } from "react-icons/tb";
 import type { Experience } from "../lib/types";
 
 export const myInfo = {
-  name: "Kemish Gomez",
-  alias: "Kemish",
+  name: "Isai Gomez",
+  alias: "Isai",
   title: "Full Stack Developer",
   image: "/Portrait.webp",
   skills: [

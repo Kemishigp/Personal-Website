@@ -12,7 +12,7 @@ function App() {
         <MobileColumn />
         <div className="text-xs pb-4">
           <p>
-            Made by <span className="italic text-teal-200">kemish gomez</span>
+            Made by <span className="italic text-teal-200">isai gomez</span>
           </p>
         </div>
       </AnimatedGridMainBackground>
